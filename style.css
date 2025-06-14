@@ -1,0 +1,371 @@
+/* Genel ayarlar */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 10px;
+  background-color: #fafafa92;
+  color: #333;
+}
+
+/* Başlık ve Menü */
+header {
+  background-color: #af894c;
+  color: white;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+button.menu-toggle {
+  background-color: #608e38;
+  color: rgba(255, 255, 255, 0.444);
+  border: none;
+  padding: 8px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  display: none;
+}
+
+/* Menü */
+nav#menu ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 10px 0 0 0;
+  gap: 15px;
+}
+
+nav#menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav#menu ul li a:hover,
+nav#menu ul li a.active {
+  background-color: #2e7d32;
+}
+
+/* Arama Kutusu */
+#searchInput {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px 12px;
+  margin: 15px 0;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* İçerik kutuları */
+.content-box {
+  background-color: white;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.content-box h3 {
+  margin-top: 0;
+  color: #4caf50;
+}
+
+/* Main bölümleri */
+main section {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+main section img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  max-width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.slider img.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  border-radius: 10px;
+  z-index: 0;
+}
+
+.slider img.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Galeri */
+.galeri {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.galeri img {
+  flex: 1 1 45%; /* Esneklik ve genişlik ayarı */
+  max-width: 450px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.galeri img:hover {
+  transform: scale(1.05);
+}
+
+/* Formlar */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  margin: 6px 0 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+form button {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #388e3c;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 5000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 8% auto;
+  padding: 20px;
+  max-width: 600px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.modal-content img {
+  max-width: 100%;
+  margin-bottom: 15px;
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  button.menu-toggle {
+    display: block;
+  }
+
+  nav#menu ul {
+    flex-direction: column;
+    display: none;
+    margin: 0;
+    gap: 8px;
+    width: 100%;
+  }
+
+  nav#menu ul.active {
+    display: flex;
+  }
+
+  .galeri img {
+    flex: 1 1 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+.bolum {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.hakkimizda-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.hakkimizda-yazi {
+  flex: 1;
+  min-width: 250px;
+  padding: 10px;
+}
+
+.hakkimizda-resim {
+  flex: 1;
+  min-width: 250px;
+}
+.hakkimizda-resim img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.kart-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.hizmet-kart {
+  background: #f0f0f0;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.hizmet-kart:hover {
+  transform: scale(1.05);
+}
+
+.duyuru-kutu {
+  background: #dff0d8;
+  display: inline-block;
+  padding: 20px 30px;
+  border-left: 5px solid green;
+  border-radius: 10px;
+}
+
+.istatistikler {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.istat-kutu {
+  font-size: 24px;
+  font-weight: bold;
+}
+.istat-kutu .sayi {
+  color: #009933;
+  font-size: 36px;
+  display: block;
+}
+
+.yorum-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.yorum {
+  background: #f9f9f9;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.whatsapp-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+}
+.whatsapp-btn img {
+  width: 50px;
+  height: 50px;
+}
+.yorum-slider {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.yorum {
+  display: none;
+  padding: 20px;
+  background: #f2f2f2;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.yorum.active {
+  display: block;
+}
+#map-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#map-container img {
+  width: 900px; /* istediğin piksel genişliği */
+  max-width: 140%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+

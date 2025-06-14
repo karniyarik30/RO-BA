@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RO-BA Tarım ve Hayvancılık</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>RO-BA Tarım ve Hayvancılık</h1>
+    <button class="menu-toggle" onclick="toggleMenu()">Menüyü Göster / Gizle</button>
+    <nav id="menu">
+      <ul>
+        <li><a href="#" onclick="sayfaGoster('anaSayfa'); return false;">Ana Sayfa</a></li>
+        <li><a href="#" onclick="sayfaGoster('tarim'); return false;">Tarım</a></li>
+        <li><a href="#" onclick="sayfaGoster('hayvancilik'); return false;">Hayvancılık</a></li>
+        <li><a href="#" onclick="sayfaGoster('iletisim'); return false;">İletişim</a></li>
+        <li><a href="#" onclick="sayfaGoster('ciftciKayit'); return false;">Çiftçi Kayıt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <input type="text" id="searchInput" placeholder="Aramak istediğiniz seçenek..." />
+
+  <main>
+    <!-- HAKKIMIZDA -->
+    <section id="hakkimizda" class="bolum">
+      <div class="hakkimizda-container">
+        <div class="hakkimizda-yazi">
+          <h2>Hakkımızda</h2>
+          <p>RO-BA Tarım ve Hayvancılık olarak sürdürülebilir üretim, modern tarım teknikleri ve hayvan sağlığına verdiğimiz önemle sektörde öncüyüz.</p>
+        </div>
+        <div class="hakkimizda-resim">
+       <img src="https://www.roba.com/wp-content/uploads/2017/10/robasnip.png" alt="RO-BA Tanıtım" />
+        </div>
+      </div>
+    </section>
+    <!-- HİZMET KARTLARI -->
+    <section id="hizmetler" class="bolum">
+      <h2>Hizmetlerimiz</h2>
+      <div class="kart-container">
+        <div class="hizmet-kart">Tarım</div>
+        <div class="hizmet-kart">Hayvancılık</div>
+        <div class="hizmet-kart">Danışmanlık</div>
+      </div>
+    </section>
+
+    <!-- DUYURU / HABER -->
+    <section id="duyuru" class="bolum">
+      <div class="duyuru-kutu">
+        <h3>Yeni Sezon Ürünlerimiz Geldi!</h3>
+        <p>Detaylı bilgi için bize ulaşabilirsiniz.</p>
+      </div>
+    </section>
+
+    <!-- İSTATİSTİKLER -->
+    <section id="istatistik" class="bolum">
+      <div class="istatistikler">
+        <div class="istat-kutu"><span class="sayi" data-sayi="10">0</span><p>Yıllık Tecrübe</p></div>
+        <div class="istat-kutu"><span class="sayi" data-sayi="200">0</span><p>Mutlu Çiftçi</p></div>
+        <div class="istat-kutu"><span class="sayi" data-sayi="30">0</span><p>Aktif Proje</p></div>
+      </div>
+    </section>
+
+    <!-- REFERANSLAR -->
+    <section id="referanslar" class="bolum">
+  <h2>Çiftçi Yorumları</h2>
+  <div class="yorum-slider">
+    <div class="yorum active">
+      <p>"RO-BA sayesinde verimim arttı."</p>
+      <strong>- Ahmet K.</strong>
+    </div>
+    <div class="yorum">
+      <p>"Hayvancılık desteği çok iyi organize ediliyor."</p>
+      <strong>- Elif Y.</strong>
+    </div>
+  </div>
+</section>
+    <!-- HARİTA -->
+    <section class="content-box">
+      <h3>Türkiye Tarım ve Hayvancılık Haritası</h3>
+      <div id="map-container">
+  <img src="https://lh3.googleusercontent.com/proxy/PPXZbFEux_TmvizJkOuPQZCqM62k85dOHUv4Boo75vZWqpXarpGFHO797RS9Hp8Zzub6zXPzcfgF2Z0AAJNB-67SuMYgJXkiV2Q4-bV60SrZD9owgMJz5sZ4Y1F4VIWm" alt="Türkiye Haritası" id="turkey-map" style="max-width: 100%; cursor: pointer;" />
+</div>
+    </section>
+    <!-- ANA SAYFA -->
+    <section id="anaSayfa" class="active">
+      <h2>Hoş Geldiniz</h2>
+      <p>RO-BA Tarım ve Hayvancılık'a hoş geldiniz. Verimli üretim, bilinçli çiftçilik ve sürdürülebilir geleceğin adresi.</p>
+      <p id="tarihGoster"></p>
+      <button onclick="modalAc()">Buğday Hakkında Detay</button>
+
+      <div class="slider">
+        <img src="https://kokludegisimdergisi.com/resim/makale/149_25_IwLe_2.jpg" alt="Resim 1" class="slide active" />
+        <img src="https://www.gazetekars.com/d/news/25875.jpg" alt="Resim 2" class="slide" />
+        <img src="https://baskayaholding.com/uploads/hizmet/2e2c6hayvan-ihracati.jpg" alt="Resim 3" class="slide" />
+      </div>
+      <div class="content-box">
+        <h3>Organik Hayvancılık</h3>
+        <p>Organik yemlerle beslenen hayvanlar daha sağlıklı ürünler sunar.</p>
+      </div>
+      <div class="content-box">
+        <h3>Modern Tarım Yöntemleri</h3>
+        <p>Damlama sulama, verimliliği artırmak için kullanılan etkili bir yöntemdir.</p>
+      </div>
+      <div class="content-box">
+        <h3>Yem Bitkileri</h3>
+        <p>Yonca ve fiğ gibi yem bitkileri hayvancılık için önemlidir.</p>
+      </div>
+    </section>
+
+    <!-- TARIM -->
+    <section id="tarim" style="display:none;">
+      <h2>Türkiye’de Tarımın Önemi ve Buğday Yetiştiriciliği</h2>
+      <img src="https://static.birgun.net/resim/haber-detay-resim/2022/07/06/son-bir-ayda-4-bin-120-donum-ekili-ve-hasat-bekleyen-bugday-tarlasi-yandi-1037629-5.jpg" alt="Buğday Tarlası" />
+      <p>Türkiye, farklı iklim ve toprak yapıları sayesinde birçok tarım ürünü yetiştirebilen zengin bir ülkedir...</p>
+    </section>
+
+    <!-- HAYVANCILIK -->
+    <section id="hayvancilik" style="display:none;">
+      <h2>Süt Hayvancılığı ve Yemleme Teknikleri</h2>
+      <img src="https://static.daktilo.com/sites/1445/uploads/2025/02/06/buzagi-hayvancilik-aa-1962877.jpg" alt="Buzağı ve Anne Sığır" />
+      <p>Hayvancılık sektörü, ülkemizde özellikle küçük aile çiftliklerinde yaygındır...</p>
+      <div class="galeri">
+        <img src="https://www.metinfarming.com/wp-content/uploads/2018/05/kucukbas-hayvancilik-nedir.jpg" alt="Süt İneği" />
+        <img src="https://apa.az/storage/news/2021/september/24/big/614dc3427d1ef614dc3427d1f01632486210614dc3427d1ec614dc3427d1ed.jpg" alt="Buzağı" />
+      </div>
+    </section>
+
+    <!-- İLETİŞİM -->
+    <section id="iletisim" style="display:none;">
+      <h2>İletişim</h2>
+      <form onsubmit="iletisimGonder(); return false;">
+        <input type="text" placeholder="Adınız" required />
+        <input type="email" placeholder="E-posta" required />
+        <textarea placeholder="Mesajınız" required></textarea>
+        <button type="submit">Gönder</button>
+      </form>
+      <p id="formSonuc"></p>
+    </section>
+
+    <!-- ÇİFTÇİ KAYIT -->
+    <section id="ciftciKayit" style="display:none; max-width: 600px; margin: auto;">
+      <h2>Çiftçi Kayıt Formu</h2>
+      <form id="kayitFormu">
+        <label for="adsoyad">Ad Soyad:</label><br />
+        <input type="text" id="adsoyad" name="adsoyad" required /><br /><br />
+
+        <label for="telefon">Telefon Numarası:</label><br />
+        <input type="tel" id="telefon" name="telefon" pattern="[0-9]{10}" placeholder="05xxxxxxxxx" required /><br /><br />
+
+        <label for="il">İl:</label><br />
+        <input type="text" id="il" name="il" required /><br /><br />
+
+        <label for="urun">Ürün Türü:</label><br />
+        <select id="urun" name="urun" required>
+          <option value="">Seçiniz</option>
+          <option value="Buğday">Buğday</option>
+          <option value="Arpa">Arpa</option>
+          <option value="Süt">Süt</option>
+          <option value="Et">Et</option>
+        </select><br /><br />
+
+        <label for="mesaj">Mesaj (isteğe bağlı):</label><br />
+        <textarea id="mesaj" name="mesaj" rows="4" cols="50"></textarea><br /><br />
+
+        <button type="submit">Gönder</button>
+      </form>
+      <div id="sonuc" style="margin-top: 20px; padding: 10px; border: 1px dashed #4CAF50; color: #333;"></div>
+    </section>
+  </main>
+
+  <!-- WhatsApp Sabit Butonu -->
+<a href="https://wa.me/905551112233" class="whatsapp-btn" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="WhatsApp" />
+</a>
+  <!-- Modal Buğday Bilgi -->
+  <div id="myModal" class="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6);">
+    <div class="modal-content" style="background:#fff; margin:10% auto; padding:20px; max-width:600px; border-radius:10px; position:relative;">
+      <span class="close" onclick="modalKapat()" style="position:absolute; top:10px; right:20px; cursor:pointer; font-size:24px;">&times;</span>
+      <h2>Buğday Yetiştiriciliği</h2>
+      <img src="https://static.birgun.net/resim/haber-detay-resim/2022/07/06/son-bir-ayda-4-bin-120-donum-ekili-ve-hasat-bekleyen-bugday-tarlasi-yandi-1037629-5.jpg" style="max-width:100%;" />
+      <p>Buğday, Türkiye'nin en önemli tarım ürünlerinden biridir...</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
